@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@mui/material'
+import { Navbar } from './components/Navbar'
+import { Packages } from './pages/Packages'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Box sx={{ flexGrow: 1 }}>
+      <Navbar/>
+      <Box sx={{ flexGrow: 1 }} style={{ padding: 20 }}>
+        <Packages/>
+      </Box>
+
+    </Box>
+  )
 }
 
-export default App;
+export default App
